@@ -15,7 +15,7 @@ protocol MyCustomCellDelegate: AnyObject {
 
 class CustomCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var bgView: UIView!
-    @IBOutlet weak var buttonView: UIButton!
+    @IBOutlet weak var buttonIcon: UIButton!
     @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
     weak var delegate: MyCustomCellDelegate?

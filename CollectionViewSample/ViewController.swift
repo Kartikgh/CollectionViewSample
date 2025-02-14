@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        gridcollectionView.register(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
+        gridcollectionView.register(UINib(nibName: "CustomCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CustomCollectionViewCell")
 
         gridcollectionView.dataSource = self
         gridcollectionView.delegate = self
@@ -44,10 +44,10 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CustomCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCollectionViewCell", for: indexPath) as! CustomCollectionViewCell
         cell.delegate = self
         cell.titleLabel.text = gridCollectionCellData[indexPath.row]
-        cell.buttonView.setImage(UIImage(named: images[indexPath.row]), for: .normal)
+        cell.buttonIcon.setImage(UIImage(named: images[indexPath.row]), for: .normal)
         return cell
     }
 }
