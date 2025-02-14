@@ -22,23 +22,15 @@ class ViewController: UIViewController {
         gridcollectionView.delegate = self
         
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 2, height: 100) // Adjust height as needed
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 2, height: 100)
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 10
-
         gridcollectionView.collectionViewLayout = layout
     }
-
-
 }
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, MyCustomCellDelegate {
-    func didTapButton(in cell: CustomCollectionViewCell) {
-        if let indexPath = gridcollectionView.indexPath(for: cell) {
-            print("Button tapped in cell at index: \(indexPath.row)")
-        }
-    }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return gridCollectionCellData.count
     }
@@ -49,6 +41,12 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
         cell.titleLabel.text = gridCollectionCellData[indexPath.row]
         cell.buttonIcon.setImage(UIImage(named: images[indexPath.row]), for: .normal)
         return cell
+    }
+    
+    func didTapButton(in cell: CustomCollectionViewCell) {
+        if let indexPath = gridcollectionView.indexPath(for: cell) {
+            print("Button tapped in cell at index: \(indexPath.row)")
+        }
     }
 }
 
