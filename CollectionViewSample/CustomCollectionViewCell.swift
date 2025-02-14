@@ -8,17 +8,13 @@
 import Foundation
 import UIKit
 
-
-protocol MyCustomCellDelegate: AnyObject {
-    func didTapButton(in cell: CustomCollectionViewCell)
-}
-
 class CustomCollectionViewCell: UICollectionViewCell, CAAnimationDelegate {
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var buttonIcon: UIButton!
     @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
-    weak var delegate: MyCustomCellDelegate?
+    
+    var onTap: ((CustomCollectionViewCell) -> Void)?
     
     override func awakeFromNib() {
          super.awakeFromNib()
@@ -35,7 +31,7 @@ class CustomCollectionViewCell: UICollectionViewCell, CAAnimationDelegate {
     
     @objc func buttonTapped(_ sender: UIButton) {
         showRippleEffect(sender)
-        delegate?.didTapButton(in: self)
+        onTap?(self)
     }
     
     private func showRippleEffect(_ sender: UIButton) {

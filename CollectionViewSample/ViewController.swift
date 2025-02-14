@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, MyCustomCellDelegate {
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return gridCollectionCellData.count
@@ -37,16 +37,16 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCollectionViewCell", for: indexPath) as! CustomCollectionViewCell
-        cell.delegate = self
         cell.titleLabel.text = gridCollectionCellData[indexPath.row]
         cell.buttonIcon.setImage(UIImage(named: images[indexPath.row]), for: .normal)
-        return cell
-    }
-    
-    func didTapButton(in cell: CustomCollectionViewCell) {
-        if let indexPath = gridcollectionView.indexPath(for: cell) {
-            print("Button tapped in cell at index: \(indexPath.row)")
+        
+        
+        cell.onTap = { tappedCell in
+            if let tappedIndexPath = collectionView.indexPath(for: tappedCell) {
+                print("Button tapped in cell at index: \(tappedIndexPath.row)")
+            }
         }
+        return cell
     }
 }
 
