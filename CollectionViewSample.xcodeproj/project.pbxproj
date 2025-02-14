@@ -15,6 +15,7 @@
 		4C626D5E2D5FBCA500AC991E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4C626D5D2D5FBCA500AC991E /* Base */; };
 		4C626D682D5FBE1100AC991E /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C626D672D5FBE1100AC991E /* CustomCollectionViewCell.xib */; };
 		4C626D6A2D5FBE2900AC991E /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C626D692D5FBE2900AC991E /* CustomCollectionViewCell.swift */; };
+		4C626D6C2D5FD6D700AC991E /* GridData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C626D6B2D5FD6D700AC991E /* GridData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4C626D5F2D5FBCA500AC991E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C626D672D5FBE1100AC991E /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 		4C626D692D5FBE2900AC991E /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		4C626D6B2D5FD6D700AC991E /* GridData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				4C626D552D5FBCA400AC991E /* ViewController.swift */,
 				4C626D672D5FBE1100AC991E /* CustomCollectionViewCell.xib */,
 				4C626D692D5FBE2900AC991E /* CustomCollectionViewCell.swift */,
+				4C626D6B2D5FD6D700AC991E /* GridData.swift */,
 				4C626D572D5FBCA400AC991E /* Main.storyboard */,
 				4C626D5A2D5FBCA500AC991E /* Assets.xcassets */,
 				4C626D5C2D5FBCA500AC991E /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C626D6C2D5FD6D700AC991E /* GridData.swift in Sources */,
 				4C626D562D5FBCA400AC991E /* ViewController.swift in Sources */,
 				4C626D522D5FBCA400AC991E /* AppDelegate.swift in Sources */,
 				4C626D542D5FBCA400AC991E /* SceneDelegate.swift in Sources */,

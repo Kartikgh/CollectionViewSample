@@ -29,6 +29,11 @@ class CustomCollectionViewCell: UICollectionViewCell, CAAnimationDelegate {
         actionButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
     }
     
+    func configure(with data: GridData) {
+        titleLabel.text = data.title
+        buttonIcon.setImage(UIImage(named: data.imageName), for: .normal)
+    }
+    
     @objc func buttonTapped(_ sender: UIButton) {
         showRippleEffect(sender)
         onTap?(self)
