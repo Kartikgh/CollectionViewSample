@@ -56,12 +56,19 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         let cellData = gridCollectionCellData[indexPath.row]
         cell.configure(with: cellData)
         
-        cell.onTap = { tappedCell in
-            if let tappedIndexPath = collectionView.indexPath(for: tappedCell) {
-                print("Button tapped in cell at index: \(tappedIndexPath.row)")
-            }
+        cell.onTap = { [weak self] tappedCell in
+            guard let self = self else { return }
+            self.handleCellTap(tappedCell)
         }
         return cell
+    }
+}
+
+extension ViewController {
+    private func handleCellTap(_ tappedCell: CustomCollectionViewCell) {
+        if let tappedIndexPath = gridcollectionView.indexPath(for: tappedCell) {
+            print("Button tapped in cell at index: \(tappedIndexPath.row)")
+        }
     }
 }
 
