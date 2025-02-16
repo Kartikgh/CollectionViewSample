@@ -16,13 +16,41 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2R-gR-i2B">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ptg-t6-HKx">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ptg-t6-HKx" firstAttribute="width" secondItem="Z2R-gR-i2B" secondAttribute="width" id="BLg-IM-ZNC"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ptg-t6-HKx" secondAttribute="trailing" id="FXL-tP-vdy"/>
+                                    <constraint firstItem="Ptg-t6-HKx" firstAttribute="height" secondItem="Z2R-gR-i2B" secondAttribute="height" priority="250" id="NII-xA-Luv"/>
+                                    <constraint firstItem="Ptg-t6-HKx" firstAttribute="top" secondItem="Z2R-gR-i2B" secondAttribute="top" id="TCM-82-5JP"/>
+                                    <constraint firstItem="Ptg-t6-HKx" firstAttribute="leading" secondItem="Z2R-gR-i2B" secondAttribute="leading" id="kJY-oR-EoY"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ptg-t6-HKx" secondAttribute="bottom" id="mwZ-fI-DaJ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Z2R-gR-i2B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6DG-R9-pGr"/>
+                            <constraint firstItem="Z2R-gR-i2B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qle-Fn-6r5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z2R-gR-i2B" secondAttribute="bottom" id="Vzj-C9-eZF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z2R-gR-i2B" secondAttribute="trailing" id="mMq-4w-Kho"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="Z2R-gR-i2B" id="6mc-Ep-yeo"/>
+                        <outlet property="stackView" destination="Ptg-t6-HKx" id="o8R-Lh-pig"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="4"/>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>

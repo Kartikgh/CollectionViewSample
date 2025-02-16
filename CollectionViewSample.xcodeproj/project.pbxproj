@@ -14,6 +14,7 @@
 		4C626D5B2D5FBCA500AC991E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C626D5A2D5FBCA500AC991E /* Assets.xcassets */; };
 		4C626D5E2D5FBCA500AC991E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 4C626D5D2D5FBCA500AC991E /* Base */; };
 		4C626D6C2D5FD6D700AC991E /* GridData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C626D6B2D5FD6D700AC991E /* GridData.swift */; };
+		4C7F4B352D62236800E5D51A /* CustomStackViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7F4B342D62236800E5D51A /* CustomStackViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4C626D5D2D5FBCA500AC991E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C626D5F2D5FBCA500AC991E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C626D6B2D5FD6D700AC991E /* GridData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridData.swift; sourceTree = "<group>"; };
+		4C7F4B342D62236800E5D51A /* CustomStackViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				4C626D512D5FBCA400AC991E /* AppDelegate.swift */,
 				4C626D532D5FBCA400AC991E /* SceneDelegate.swift */,
 				4C626D552D5FBCA400AC991E /* ViewController.swift */,
+				4C7F4B342D62236800E5D51A /* CustomStackViewCell.swift */,
 				4C626D6B2D5FD6D700AC991E /* GridData.swift */,
 				4C626D572D5FBCA400AC991E /* Main.storyboard */,
 				4C626D5A2D5FBCA500AC991E /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C626D6C2D5FD6D700AC991E /* GridData.swift in Sources */,
+				4C7F4B352D62236800E5D51A /* CustomStackViewCell.swift in Sources */,
 				4C626D562D5FBCA400AC991E /* ViewController.swift in Sources */,
 				4C626D522D5FBCA400AC991E /* AppDelegate.swift in Sources */,
 				4C626D542D5FBCA400AC991E /* SceneDelegate.swift in Sources */,
