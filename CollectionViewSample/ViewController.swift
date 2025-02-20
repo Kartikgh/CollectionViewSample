@@ -65,17 +65,39 @@ class ViewController: UIViewController {
                 stackView.addArrangedSubview(rowStackView!)
             }
             
+            let button = CustomStackViewButton()
+            button.configure(with: data)
+            button.tag = index
+            button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
+            rowStackView?.addArrangedSubview(button)
+        }
+        
+       /* for (index, data) in gridCollectionCellData.enumerated() {
+            if index % 2 == 0 {
+                rowStackView = UIStackView()
+                rowStackView?.axis = .horizontal
+                rowStackView?.alignment = .fill
+                rowStackView?.distribution = .fillEqually
+                rowStackView?.spacing = 16
+                rowStackView?.translatesAutoresizingMaskIntoConstraints = false
+                stackView.addArrangedSubview(rowStackView!)
+            }
+            
             let cellView = CustomStackViewCell()
             cellView.configure(with: data)
             cellView.tag = index
             cellView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(cellTapped(_:))))
             rowStackView?.addArrangedSubview(cellView)
-        }
+        }*/
     }
     
-    @objc private func cellTapped(_ sender: UITapGestureRecognizer) {
+    @objc private func buttonTapped(_ sender: UIButton) {
+        print("Button tapped at index: \(sender.tag)")
+    }
+    
+    /* @objc private func cellTapped(_ sender: UITapGestureRecognizer) {
         guard let cellView = sender.view as? CustomStackViewCell else { return }
         let index = cellView.tag
         print("Tapped on index: \(index), Title: \(cellView.getTitle())")
-    }
+    }*/
 }
